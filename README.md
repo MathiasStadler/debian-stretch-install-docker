@@ -6,8 +6,8 @@
 INSTALL_DOCKER_CE="install-docker-cd.sh"
 cat <<EOF >"$INSTALL_DOCKER_CE"
 #!/bin/bash
-set -e
 sudo apt-get -y remove docker docker-engine docker.io
+set -e
 sudo apt-get -y update
 sudo apt-get install -y apt-transport-https ca-certificates wget software-properties-common
 wget https://download.docker.com/linux/debian/gpg
