@@ -5,7 +5,8 @@
 ```bash
 INSTALL_DOCKER_CE="install-docker-cd.sh"
 cat <<EOF >"$INSTALL_DOCKER_CE"
-#!/bin/bash 
+#!/bin/bash
+set -e
 sudo apt-get -y remove docker docker-engine docker.io
 sudo apt-get -y update
 sudo apt-get install -y apt-transport-https ca-certificates wget software-properties-common
@@ -18,7 +19,9 @@ sudo apt-get -y install docker-ce
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker vagrant
-docker run hello-world
+echo "please reboot this instance"
+echo "run than for simple test: docker run hello-world"
+echo "thx!!!"
 EOF
 chmod +x $INSTALL_DOCKER_CE
 ```
