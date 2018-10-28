@@ -3,7 +3,7 @@
 ## install docker-ce on stretch copy and paste method
 
 ```bash
-INSTALL_DOCKER_CE="install-docker-cd.sh
+INSTALL_DOCKER_CE="install-docker-cd.sh"
 cat <<EOF >"$INSTALL_DOCKER_CE"
 #!/bin/bash 
 sudo apt-get -y remove docker docker-engine docker.io
